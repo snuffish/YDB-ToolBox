@@ -19,7 +19,7 @@ YDB> S CONTENT="Lorem Ipsum is simply dummy text of the printing\nand typesettin
 k a galley of\ntype and scrambled it to make a type specimen\nbook."
 
 ;; Clear the screen and render the Frame
-YDB> D CLEAR^%GUI,FRAME^%GUI("StringFrame",50,CONTENT)
+YDB> D FRAME^%GUI("StringFrame",50,CONTENT)
 
 ╔═══════════════════StringFrame════════════════════╗
 ║Lorem Ipsum is simply dummy text of the printing  ║
@@ -39,7 +39,7 @@ YDB> S ROW(2)="Second Row"
 YDB> S ROW(3)="Third Row"
 
 ;; Pass the Array as reference to the Frame
-YDB> D CLEAR^%GUI,FRAME^%GUI("ArrayFrame",50,.ROW)
+YDB> D FRAME^%GUI("ArrayFrame",50,.ROW)
 
 ╔════════════════════ArrayFrame════════════════════╗
 ║First Row                                         ║
