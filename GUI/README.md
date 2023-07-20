@@ -2,7 +2,7 @@
 
 This is a Utility to create interactive CLI GUI Interactions.
 
-The best practice is to use `D CLEAR^%GUI` before every re-rendering, to prevent terminal formatting issues.
+The best practice is to use `D CLEAR^%GUI` before every re-rendering to prevent terminal formatting issues.
 
 ----------------------------------------------------------------
 
@@ -18,7 +18,7 @@ Using a string and split by the default delimiter `\n`
 YDB> S CONTENT="Lorem Ipsum is simply dummy text of the printing\nand typesetting industry. Lorem Ipsum has been\nthe industry's standard dummy text ever since the\n1500s, when an unknown printer too
 k a galley of\ntype and scrambled it to make a type specimen\nbook."
 
-;; Clear the screen and render the Frame
+;; Render the Frame
 YDB> D FRAME^%GUI("StringFrame",50,CONTENT)
 
 ╔═══════════════════StringFrame════════════════════╗
@@ -56,6 +56,7 @@ Create and render a **Select View** component that you can navigate through to s
 
 Using string values to create Select-options, its key-value will be according to it`s string order.
 ```Mumps
+;; Create an Select View component using string-values with default delimiter `|`
 YDB> S *VALUE=$$SELECT^%GUI("foo|bar|baz")
 
 foo
@@ -70,9 +71,12 @@ VALUE("VALUE")="bar"
 
 If you want a more custom key-value you can use an Mumps Array instead
 ```Mumps
+;; Setup the Key-Value Mumps Array
 YDB>S OPTION("key1")="foo"
 YDB>S OPTION("key2")="bar"
 YDB>S OPTION("key3")="baz"
+
+;; Pass the Array as reference
 YDB>S *VALUE=$$SELECT^%GUI(.OPTION)
 
 foo
