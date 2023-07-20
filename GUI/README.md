@@ -113,7 +113,7 @@ This is an internal state-variable that keeps track on your `$X`/`$Y` cursor whi
 
 The `%GPOS` format is `$X,$Y`, the `$Y` value in `%GPOS` is being **$INCREMENT**ed after every render on the Y-axis.
 
-This enables you to draw multiple Frames after on-another, also to place them at a desired position on the screen _(in-dependent from the other frames)_.
+This enables you to draw multiple Frames after one-another, also to place them at a desired position on the screen _(in-dependent from the other frames)_.
 
 #### Usages:
 
