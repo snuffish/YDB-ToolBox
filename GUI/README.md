@@ -54,7 +54,7 @@ Create and render a **Select View** element that you can navigate through to sel
 
 #### Usages:
 
-Using a string values to create an, its key-value will be according to it`s string order.
+Using string values to create Select-options, its key-value will be according to it`s string order.
 ```Mumps
 YDB> S *VALUE=$$SELECT^%GUI("foo|bar|baz")
 
