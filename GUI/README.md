@@ -5,7 +5,7 @@ This is a Utility to create interactive CLI GUI Interactions.
 ----------------------------------------------------------------
 
 
-### Window Frames
+## Window Frames
 
 Create a Window Frame with custom content.
 
@@ -47,3 +47,5 @@ YDB> D CLEAR^%GUI,FRAME^%GUI("ArrayFrame",50,.ROW)
 ║Third Row                                         ║
 ╚══════════════════════════════════════════════════╝
 ```
+
+### Select View

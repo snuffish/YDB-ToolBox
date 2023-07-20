@@ -79,20 +79,20 @@ GALABELS(%ROUTINE)
 	; Usage:
 	; 	> d GALABELS("test")
 	;  	> s *LABELS=$$GALABELS("test")
-    ; 	@returns
-    ; 		LABELS(1)="Test"
-    ; 		LABELS(1,"ZPOS")="Test+1^test"
-    ; 		LABELS(1,"ZPOS","LABEL")="Test"
-    ; 		LABELS(1,"ZPOS","OFFSET")=1
-    ; 		LABELS(1,"ZPOS","ROUTINE")="test"
-    ; 		LABELS(2)="powerOf"
-    ; 		LABELS(2,"ARGS",1)="value"
-    ; 		LABELS(2,"ARGS",2)="pw"
-    ; 		LABELS(2,"ZPOS")="powerOf+9^test"
-    ; 		LABELS(2,"ZPOS","LABEL")="powerOf"
-    ; 		LABELS(2,"ZPOS","OFFSET")=9
-    ; 		LABELS(2,"ZPOS","ROUTINE")="test"
-    ;
+	; 	@returns
+	; 		LABELS(1)="Test"
+	; 		LABELS(1,"ZPOS")="Test+1^test"
+	; 		LABELS(1,"ZPOS","LABEL")="Test"
+	; 		LABELS(1,"ZPOS","OFFSET")=1
+	; 		LABELS(1,"ZPOS","ROUTINE")="test"
+	; 		LABELS(2)="powerOf"
+	; 		LABELS(2,"ARGS",1)="value"
+	; 		LABELS(2,"ARGS",2)="pw"
+	; 		LABELS(2,"ZPOS")="powerOf+9^test"
+	; 		LABELS(2,"ZPOS","LABEL")="powerOf"
+	; 		LABELS(2,"ZPOS","OFFSET")=9
+	; 		LABELS(2,"ZPOS","ROUTINE")="test"
+	;
 
 	for i=1:1 s line=$t(+i^@%ROUTINE) q:(line="")  d
 	.q:($e(line,1)=" ")
