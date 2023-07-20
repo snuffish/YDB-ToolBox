@@ -73,6 +73,7 @@ If you want a more custom key-value you can use an Mumps Array instead
 YDB>S OPTION("key1")="foo"
 YDB>S OPTION("key2")="bar"
 YDB>S OPTION("key3")="baz"
+YDB>S *VALUE=$$SELECT^%GUI(.OPTION)
 
 foo
 bar
