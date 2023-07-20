@@ -2,6 +2,8 @@
 
 This is a Utility to create interactive CLI GUI Interactions.
 
+The best practice is to use `D CLEAR^%GUI` before every re-rendering, to prevent terminal formatting issues.
+
 ----------------------------------------------------------------
 
 ## Window Frames
