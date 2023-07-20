@@ -100,3 +100,39 @@ Simply clear the CLI Screen
 ```Mumps
 YDB> D CLEAR^%GUI
 ```
+
+----------------------------------------------------------------
+
+## Special State Variables
+
+### %GPOS
+
+This is an internal state-variable that keeps track on your `$X`/`$Y` cursor while rendering your GUI Components.
+
+The `%GPOS` format is `$X,$Y`, the `$Y` value in `%GPOS` is being **$INCREMENT**ed after every render on the Y-axis.
+
+This enables you to draw multiple Frames after on-another, also to place them at a desired position on the screen _(in-dependent from the other frames)_.
+
+#### Usages:
+
+```Mumps
+WindowFrameRoutine
+	D CLEAR^%GUI ;; Clear the screen
+	D FRAME^%GUI("FirstFrame",50,"Some content...") ;; %GPOS="1,4"
+	D FRAME^%GUI("SecondFrame",30,"Some other content...") ;; %GPOS="1,7"
+	S %GPOS="55,1" D FRAME^%GUI("RightFrame",30,"Custom %GPOS positioned Frame\nwith some random\nsimple content text...") ;; %GPOS="55,6"
+	Q
+
+YDB> D WindowFrameRoutine
+╔════════════════════FirstFrame════════════════════╗  ╔══════════RightFrame══════════╗
+║Some content...                                   ║  ║Custom %GPOS positioned Frame ║
+╚══════════════════════════════════════════════════╝  ║with some random              ║
+╔═════════SecondFrame══════════╗                      ║simple content text...        ║
+║Some other content...         ║                      ╚══════════════════════════════╝
+╚══════════════════════════════╝
+```
+
+In this example we render 2 Frames to the left and 1 Frame to the right. When `%GPOS` is unset is's value defaults to `1,1`.
+- After the **FirstFrame** has been rendered the `%GPOS` value has been set to `1,4`
+- After the **SecondFrame** has been rendered the `%GPOS` value has been set to `1,7` - because it continues where the previous **FirstFrame** finished.
+- On the **RightFrame** we re-set the `%GPOS` value to `55,1` which means that we move the Cursor-pointer to the coordinates (`$X=55`,`$Y=1`). Then we render the frame from that posotion.
