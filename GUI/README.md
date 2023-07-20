@@ -50,7 +50,7 @@ YDB> D CLEAR^%GUI,FRAME^%GUI("ArrayFrame",50,.ROW)
 
 ## Select View
 
-Create and render a **Select View** element that you can navigate through to select an option.
+Create and render a **Select View** component that you can navigate through to select an option.
 
 #### Usages:
 
