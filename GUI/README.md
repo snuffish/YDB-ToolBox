@@ -114,7 +114,7 @@ YDB> D CLEAR^%GUI
 
 ### %X & %Y
 
-This is an internal state-variable that keeps track on your `%X`/`%Y` cursor while rendering your GUI Components.
+These are internal state-variable that keeps track on your `%X`/`%Y` cursor position while rendering your GUI Components.
  
 The value of `%Y` is being **$INCREMENT**ed after every render on the Y-axis.
 
