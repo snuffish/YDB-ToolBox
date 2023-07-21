@@ -125,9 +125,9 @@ This enables you to draw multiple Frames after one-another, also to place them a
 ```Mumps
 WindowFrameRoutine
 	D CLEAR^%GUI ;; Clear the screen
-	D FRAME^%GUI("FirstFrame",50,"Some content...") ;; %X=1,%Y=4
-	D FRAME^%GUI("SecondFrame",30,"Some other content...") ;; %X=1,%Y=7
-	S %X=55,%Y=1 D FRAME^%GUI("RightFrame",30,"Custom %X/%U positioned Frame\nwith some random\nsimple content text...") ;; %X=55,%Y=6
+	D FRAME^%GUI("FirstFrame",50,"Some content...") ;; ==> %X=1,%Y=4
+	D FRAME^%GUI("SecondFrame",30,"Some other content...") ;; ==> %X=1,%Y=7
+	S %X=55,%Y=1 D FRAME^%GUI("RightFrame",30,"Custom %X/%U positioned Frame\nwith some random\nsimple content text...") ;; ==> %X=55,%Y=6
 	Q
 
 YDB> D WindowFrameRoutine
