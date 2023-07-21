@@ -5,12 +5,10 @@ CLEAR U $P:(X=0:Y=0:CLEAR) Q
 
 ; Move the cursor to the specified coordinates.
 ; $INCREMENT the Y-Position after every call.
-POS N (%GPOS)
-	VIEW "NOUNDEF" S X=+$P(%GPOS,",",1),Y=+$P(%GPOS,",",2) VIEW "UNDEF"
-	S:(X=0) X=1 S:(Y=0) Y=1
-	WRITE $CHAR(27)_"["_Y_";"_X_"H"
-	S $P(%GPOS,",",1)=X
-	S $P(%GPOS,",",2)=$I(Y)
+POS N (%X,%Y)
+	S %X=$G(%X,1),%Y=$G(%Y,1)
+	WRITE $CHAR(27)_"["_%Y_";"_%X_"H"
+	S %Y=%Y+1
 	Q
 
 
