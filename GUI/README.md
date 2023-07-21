@@ -141,7 +141,7 @@ YDB> D WindowFrameRoutine
 ╚══════════════════════════════╝
 ```
 
-In this example we render 2 Frames to the left and 1 Frame to the right. When `%X`/`%Y` is unset their values defaults to `1`.
+In this example we render 2 Frames to the left and 1 Frame to the right. When `%X`/`%Y` is unset, their values defaults to `1`.
 - After the **FirstFrame** has been rendered the posotion has been set to `%X=1,%Y=4`
 - After the **SecondFrame** has been rendered the position has been set to `%X=1,%Y=7` - because it continues where the previous **FirstFrame** finished.
 - On the **RightFrame** we re-set the `%X` & `%Y` value to `%X=55,%Y=1` which means that we move the Cursor-pointer to the xy-coordinates `55,1`. Then we render the frame from that posotion.
