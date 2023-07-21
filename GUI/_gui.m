@@ -1,4 +1,5 @@
 %GUI; Routine Utility to handle CLI GUI Operations
+	; Documentation: https://github.com/snuffish/YDB-ToolBox/blob/master/GUI/README.md
 	Q
 
 CLEAR U $P:(X=0:Y=0:CLEAR) Q
