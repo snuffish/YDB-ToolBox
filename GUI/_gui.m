@@ -1,4 +1,4 @@
-%GUI; Routine Utility to handle CLI GUI Operations
+%GUI; Routine Utility to handle CLI GUI Interactive Operations
 	; Documentation: https://github.com/snuffish/YDB-ToolBox/blob/master/GUI/README.md
 	Q
 
