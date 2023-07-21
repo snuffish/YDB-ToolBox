@@ -127,6 +127,7 @@ WindowFrameRoutine
 	D CLEAR^%GUI ;; Clear the screen
 	D FRAME^%GUI("FirstFrame",50,"Some content...") ;; ==> %X=1,%Y=4
 	D FRAME^%GUI("SecondFrame",30,"Some other content...") ;; ==> %X=1,%Y=7
+	
 	S %X=55,%Y=1
 	D FRAME^%GUI("RightFrame",30,"Custom %X/%U positioned Frame\nwith some random\n text...") ;; ==> %X=55,%Y=6
 	Q
