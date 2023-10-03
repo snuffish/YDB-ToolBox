@@ -134,7 +134,7 @@ WindowFrameRoutine
 
 YDB> D WindowFrameRoutine
 ╔════════════════════FirstFrame════════════════════╗  ╔══════════RightFrame══════════╗
-║Some content...                                   ║  ║Custom %GPOS positioned Frame ║
+║Some content...                                   ║  ║Custom %X/%Y positioned Frame ║
 ╚══════════════════════════════════════════════════╝  ║with some random              ║
 ╔═════════SecondFrame══════════╗                      ║simple content text...        ║
 ║Some other content...         ║                      ╚══════════════════════════════╝
